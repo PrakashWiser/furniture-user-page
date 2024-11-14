@@ -1,0 +1,10 @@
+.nav_items a {
+  font-size: var(--sz15);
+  font-weight: var(--fw600);
+}
+.bg_theme{
+  background-color: var(--background-color);
+}
+.custom-dropdown:hover .dropdown-menu {
+    display: block; 
+  }

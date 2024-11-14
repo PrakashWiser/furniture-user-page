@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --font-inter: "Inter", sans-serif;
+  --font-popins: "Poppins", sans-serif;
+  --font-seif: "Open Sans", sans-serif;
+  --fontmonserrat:"Montserrat", sans-serif
+  --sz1: 1px;
+  --sz2: 2px;
+  --sz3: 3px;
+  --sz4: 4px;
+  --sz5: 5px;
+  --sz6: 6px;
+  --sz7: 7px;
+  --sz8: 8px;
+  --sz9: 9px;
+  --sz10: 10px;
+  --sz11: 11px;
+  --sz12: 12px;
+  --sz13: 13px;
+  --sz14: 14px;
+  --sz15: 15px;
+  --sz16: 16px;
+  --sz17: 17px;
+  --sz18: 18px;
+  --sz19: 19px;
+  --sz20: 20px;
+  --sz21: 21px;
+  --sz22: 22px;
+  --sz23: 23px;
+  --sz24: 24px;
+  --sz25: 25px;
+  --fw500: 500;
+  --fw600: 600;
+  --fw700: 700;
+  --fw800: 800;
+  --text-color: #000;
+  --primary-color: #fcb900;
+  --background-color: #fff;
+}
+.dark-mode {
+  --text-color: #fff;
+  --primary-color: #ffa500;
+  --background-color: #333;
+}
+body{
+  color: var(--text-color) !important;
+  background-color: var(--background-color) !important;
+  font-family: var(--fontmonserrat) !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.inter,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-inter);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.popins {
+  font-family: var(--font-popins);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.serif {
+  font-family: var(--font-seif);
 }
-
-.App-link {
-  color: #61dafb;
+.fw600 {
+  font-weight: var(--fw600);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fw700 {
+  font-weight: var(--fw700);
+}
+a {
+  text-decoration: none !important;
+  color:var(--text-color) !important;
+}
+.text_color {
+  color: var(--text-color);
+}
+.primary_color {
+  color: var(--primary-color);
+}
+.text_white {
+  color: var(--text-color);
+}
+ul {
+  list-style: none;
+  padding: 0 !important;
+}
+p {
+  font-family: var(--font-seif);
+}
+.bg_org {
+  background-color: var(--primary-color) !important;
 }

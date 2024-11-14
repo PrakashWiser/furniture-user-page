@@ -1,0 +1,117 @@
+.footer {
+  background-color: black;
+  color: white;
+  padding: 60px 20px;
+  margin-top: 50px;
+}
+
+.footer .col {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer a {
+  color: white !important;
+  text-decoration: none;
+  padding: 1px 0;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: gray !important;
+  text-decoration: underline;
+}
+
+.footer .d-flex li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer .d-flex li a {
+  color: white;
+  font-size: var(--sz20);
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .d-flex li a:hover {
+  background-color: var(--primary-color);
+  color: white !important;
+  transform: scale(1.1);
+}
+
+.footer .d-flex li a:focus {
+  outline: none;
+  border: 2px solid #218838;
+}
+
+.footer-contact h2,
+.footer-contact span {
+  color: white;
+}
+
+.custom-input-group .form-control,
+.custom-input-group .input-group-text {
+  background-color: white;
+  border: none;
+  color: black;
+}
+
+.custom-input-group .form-control:focus,
+.custom-input-group .form-control:hover {
+  background-color: white;
+  color: black;
+  border: none;
+  box-shadow: none;
+}
+
+.custom-input-group .btn {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+.custom-input-group .btn:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.custom-input-group .input-group-text .btn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s 0.2s, opacity 0.2s ease-in-out;
+}
+
+.custom-input-group .form-control:hover + .input-group-text .btn,
+.custom-input-group .form-control:focus + .input-group-text .btn {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.2s, opacity 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .footer .col {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-contact h2 {
+    font-size: 24px;
+  }
+
+  .footer-contact span {
+    font-size: 16px;
+  }
+}
