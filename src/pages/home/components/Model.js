@@ -14,7 +14,7 @@ function Model({ showmodel, setShowmodel }) {
         show={showmodel}
         onHide={handleCloseModal}
       >
-        <Images link={model} styles="w-100 " alt="model-pic" />
+        <Images link={model} styles="img-fluid" alt="model-pic" />
         <MdOutlineDangerous
           className="danger_iocn"
           onClick={handleCloseModal}

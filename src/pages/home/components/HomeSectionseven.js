@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import MainLayOut from "../../../LayOut/MainLayOut";
+import MainLayOut from "../../../Layout/MainLayOut";
 import { GiShoppingCart } from "react-icons/gi";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { IoFootballOutline } from "react-icons/io5";

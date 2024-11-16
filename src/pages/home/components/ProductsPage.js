@@ -12,10 +12,11 @@ import badone from "../images/bad-1.jpeg";
 import badtwo from "../images/bad-2.jpeg";
 import badthree from "../images/bad-3.jpeg";
 import badfour from "../images/bad-4.jpeg";
-import { FiPlusCircle, FiMinusCircle, FiChevronDown } from "react-icons/fi";
+import { FiPlusCircle } from "react-icons/fi";
+import { FaShopify } from "react-icons/fa";
 import Images from "./Images";
 import { Container, Row, Col, Button, Offcanvas } from "react-bootstrap";
-import MainLayOut from "../../../LayOut/MainLayOut";
+import MainLayOut from "../../../Layout/MainLayOut";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -24,7 +25,7 @@ const ProductPage = () => {
 
   const objData = [
     {
-      id: 0,
+      id: 1,
       img: chair1,
       name: "Natural Wood Dining Chair",
       price: "$299.99",
@@ -32,9 +33,14 @@ const ProductPage = () => {
       tags: "clean, deco, furniture, m1, product, woocommerce",
       description:
         "Product categories and tags work in much the same way as normal categories and tags you have when writing posts in WordPress. They can be created, edited, and selected at any time.",
+      icon: <FaShopify />,
+      color: "brown",
+      material: "Wood",
+      dimensions: "20x18x35 inches",
+      rating: 4.5,
     },
     {
-      id: 1,
+      id: 2,
       img: chair2,
       name: "Paolo Black Wood Dining Chair",
       price: "$139.99",
@@ -42,9 +48,14 @@ const ProductPage = () => {
       tags: "black, wood, dining, modern",
       description:
         "A sleek and modern dining chair crafted from high-quality black wood, perfect for any dining room setting.",
+      icon: <FaShopify />,
+      color: "black",
+      material: "Wood",
+      dimensions: "21x19x37 inches",
+      rating: 4.0,
     },
     {
-      id: 2,
+      id: 3,
       img: chair3,
       name: "Classic Leather Dining Chair",
       price: "$179.99",
@@ -52,9 +63,14 @@ const ProductPage = () => {
       tags: "classic, leather, dining, luxurious, modern",
       description:
         "A sophisticated dining chair with a comfortable leather seat and a stylish wooden frame. Ideal for modern dining rooms.",
+      icon: <FaShopify />,
+      color: "brown",
+      material: "Leather",
+      dimensions: "22x20x38 inches",
+      rating: 4.8,
     },
     {
-      id: 3,
+      id: 4,
       img: chair4,
       name: "Rustic Farmhouse Chair",
       price: "$149.99",
@@ -62,9 +78,14 @@ const ProductPage = () => {
       tags: "rustic, farmhouse, wood, vintage",
       description:
         "A charming farmhouse-style dining chair with a distressed finish and sturdy wooden frame. A perfect addition to a cozy dining space.",
+      icon: <FaShopify />,
+      color: "gray",
+      material: "Wood",
+      dimensions: "23x21x36 inches",
+      rating: 3.5,
     },
     {
-      id: 4,
+      id: 5,
       img: chair5,
       name: "Industrial Metal Chair",
       price: "$119.99",
@@ -72,9 +93,14 @@ const ProductPage = () => {
       tags: "industrial, metal, modern, urban",
       description:
         "An industrial-inspired chair with a minimalist metal design. Ideal for modern kitchens, cafes, or industrial-style interiors.",
+      icon: <FaShopify />,
+      color: "silver",
+      material: "Metal",
+      dimensions: "22x18x34 inches",
+      rating: 4.2,
     },
     {
-      id: 5,
+      id: 6,
       img: chair6,
       name: "Minimalist Dining Chair",
       price: "$99.99",
@@ -82,9 +108,14 @@ const ProductPage = () => {
       tags: "minimalist, simple, modern, sleek",
       description:
         "A clean and simple dining chair designed for modern spaces. Its minimalist design makes it a versatile piece for various interiors.",
+      icon: <FaShopify />,
+      color: "white",
+      material: "Plastic",
+      dimensions: "20x19x33 inches",
+      rating: 4.7,
     },
     {
-      id: 6,
+      id: 7,
       img: chair7,
       name: "Scandi Dining Chair",
       price: "$129.99",
@@ -92,9 +123,14 @@ const ProductPage = () => {
       tags: "scandi, nordic, wood, clean, stylish",
       description:
         "A Scandinavian-inspired dining chair with a sleek wooden frame and comfortable seating. Perfect for contemporary dining rooms.",
+      icon: <FaShopify />,
+      color: "natural",
+      material: "Wood",
+      dimensions: "21x18x35 inches",
+      rating: 4.3,
     },
     {
-      id: 7,
+      id: 8,
       img: chair8,
       name: "Contemporary Leather Chair",
       price: "$219.99",
@@ -102,9 +138,14 @@ const ProductPage = () => {
       tags: "contemporary, leather, dining, luxury",
       description:
         "A luxurious leather dining chair with a contemporary design. Ideal for modern homes looking for both comfort and style.",
+      icon: <FaShopify />,
+      color: "black",
+      material: "Leather",
+      dimensions: "24x20x38 inches",
+      rating: 4.9,
     },
     {
-      id: 8,
+      id: 9,
       img: badone,
       name: "Comfort Plus Dining Chair",
       price: "$249.99",
@@ -112,9 +153,14 @@ const ProductPage = () => {
       tags: "comfort, plush, dining, modern",
       description:
         "A plush and comfortable dining chair designed with modern aesthetics in mind. Perfect for long dinners and gatherings.",
+      icon: <FaShopify />,
+      color: "beige",
+      material: "Fabric",
+      dimensions: "23x19x36 inches",
+      rating: 4.6,
     },
     {
-      id: 9,
+      id: 10,
       img: badtwo,
       name: "Bold Accent Chair",
       price: "$179.99",
@@ -122,9 +168,14 @@ const ProductPage = () => {
       tags: "bold, accent, unique, modern",
       description:
         "A bold accent chair designed to stand out in any room. Its sleek design and vibrant color make it a perfect statement piece.",
+      icon: <FaShopify />,
+      color: "red",
+      material: "Velvet",
+      dimensions: "22x21x34 inches",
+      rating: 4.0,
     },
     {
-      id: 10,
+      id: 11,
       img: badthree,
       name: "Elegant Wooden Chair",
       price: "$159.99",
@@ -132,9 +183,14 @@ const ProductPage = () => {
       tags: "elegant, wooden, dining, classic",
       description:
         "An elegant wooden dining chair with refined details, perfect for classic dining rooms or traditional spaces.",
+      icon: <FaShopify />,
+      color: "dark brown",
+      material: "Wood",
+      dimensions: "23x19x36 inches",
+      rating: 4.4,
     },
     {
-      id: 11,
+      id: 12,
       img: badfour,
       name: "Vintage Dining Chair",
       price: "$169.99",
@@ -142,6 +198,11 @@ const ProductPage = () => {
       tags: "vintage, retro, dining, classic",
       description:
         "A vintage-style dining chair that adds a touch of retro charm to any room. The detailed design and sturdy frame are built to last.",
+      icon: <FaShopify />,
+      color: "vintage brown",
+      material: "Wood",
+      dimensions: "22x20x35 inches",
+      rating: 4.2,
     },
   ];
 
@@ -170,165 +231,97 @@ const ProductPage = () => {
 
   const handleRemoveFromCart = (id) => {
     const productInCart = cartItems.find((item) => item.id === id);
-    if (productInCart && productInCart.quantity > 1) {
+    if (productInCart.quantity === 1) {
+      setCartItems(cartItems.filter((item) => item.id !== id));
+    } else {
       setCartItems(
         cartItems.map((item) =>
           item.id === id ? { ...item, quantity: item.quantity - 1 } : item
         )
       );
-    } else {
-      setCartItems(cartItems.filter((item) => item.id !== id));
     }
   };
 
-  const handleShowCart = () => setShowCart(true);
-  const handleCloseCart = () => setShowCart(false);
+  const handleIconClick = () => {
+    setShowCart(true);
+  };
 
   return (
-    <MainLayOut styles="my-5">
-      <Container>
-        {selectedChair ? (
-          <Row>
-            <Col md={6}>
-              <Images
-                link={selectedChair.img}
-                alt={selectedChair.name}
-                styles="img-fluid"
-              />
-            </Col>
-
-            <Col md={6}>
-              <h1>{selectedChair.name}</h1>
+    <MainLayOut>
+      <Container className="pt-5">
+        <Row>
+          <Col lg={6} className="d-flex justify-content-center">
+            <Images link={selectedChair.img} styles="img-fluid" />
+          </Col>
+          <Col lg={6}>
+            <h2>{selectedChair.name}</h2>
+            <h5>{selectedChair.price}</h5>
+            <p>{selectedChair.description}</p>
+            <div>
               <p>
-                <strong>Price:</strong> {selectedChair.price}
+                <strong>Color:</strong> {selectedChair.color}
               </p>
               <p>
-                <strong>Description:</strong> {selectedChair.description}
+                <strong>Material:</strong> {selectedChair.material}
+              </p>
+              <p>
+                <strong>Dimensions:</strong> {selectedChair.dimensions}
+              </p>
+              <p>
+                <strong>Rating:</strong> {selectedChair.rating} / 5
               </p>
               <p>
                 <strong>Category:</strong> {selectedChair.Categories}
               </p>
-              <p>
-                <strong>Tags:</strong> {selectedChair.tags}
-              </p>
-
-              <div className="d-flex align-items-center border w-25 justify-content-center p-2">
-                <Button
-                  variant="outline-secondary"
-                  onClick={handleRemoveFromCart}
-                  style={{
-                    borderRadius: "50%",
-                    padding: "10px",
-                    border: "none",
-                    backgroundColor: "#f8f9fa",
-                  }}
-                >
-                  <FiMinusCircle />
-                </Button>
-                <span className="mx-3">
-                  {
-                    cartItems.filter((item) => item.id === selectedChair.id)
-                      .length
-                  }
-                </span>
-                <Button
-                  variant="outline-secondary"
-                  onClick={handleAddToCart}
-                  style={{
-                    borderRadius: "50%",
-                    padding: "10px",
-                    border: "none",
-                    backgroundColor: "#f8f9fa",
-                  }}
-                >
-                  <FiPlusCircle />
-                </Button>
-              </div>
-
-              <Button
-                onClick={handleAddToCart}
-                className="mt-5 bg_org border-0"
-              >
-                {cartItems.some((item) => item.id === selectedChair.id)
-                  ? `Added to Cart`
-                  : "Add to Cart"}
+            </div>
+            <div className="d-flex gap-3">
+              <Button className="bg-success border-0" onClick={handleAddToCart}>
+                Add to Cart
               </Button>
-            </Col>
-          </Row>
-        ) : (
-          <p>Product not found</p>
-        )}
+              <Button className="bg-warning border-0" onClick={handleIconClick}>
+                {selectedChair.icon}
+              </Button>
+            </div>
+          </Col>
+        </Row>
       </Container>
 
-      <div className="d-flex justify-content-center mt-4">
-        <Button
-          variant="link"
-          onClick={handleShowCart}
-          style={{ fontSize: "24px", color: "#007bff" }}
-        >
-          <FiChevronDown />
-        </Button>
-      </div>
-
       <ToastContainer
-        position="top-right"
-        autoClose={3000}
+        position="top-left"
+        autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
-        closeOnClick
+        closeOnClick={true}
         rtl={false}
-        pauseOnFocusLoss
+        pauseOnFocusLoss={false}
         draggable
         pauseOnHover
       />
 
-      <Offcanvas show={showCart} onHide={handleCloseCart} placement="end">
+      <Offcanvas
+        show={showCart}
+        onHide={() => setShowCart(false)}
+        placement="end"
+        className="offcanvas-end"
+      >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Your Cart</Offcanvas.Title>
+          <Offcanvas.Title>Shopping Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {cartItems.length > 0 ? (
-            <div>
-              {cartItems.map((item) => (
-                <div key={item.id} className="d-flex justify-content-between">
-                  <div>
-                    <h6>{item.name}</h6>
-                    <p>{item.price}</p>
-                  </div>
-                  <div className="d-flex align-items-center">
-                    <Button
-                      variant="outline-secondary"
-                      onClick={() => handleRemoveFromCart(item.id)}
-                      style={{
-                        borderRadius: "50%",
-                        padding: "5px",
-                        border: "none",
-                      }}
-                    >
-                      <FiMinusCircle />
-                    </Button>
-                    <span className="mx-3">{item.quantity}</span>
-                    <Button
-                      variant="outline-secondary"
-                      onClick={() => handleAddToCart(item.id)}
-                      style={{
-                        borderRadius: "50%",
-                        padding: "5px",
-                        border: "none",
-                      }}
-                    >
-                      <FiPlusCircle />
-                    </Button>
-                  </div>
-                </div>
-              ))}
-              <div className="mt-3">
-                <Button className="bg_org border-0 fw600">Go to Cart</Button>
-              </div>
-            </div>
-          ) : (
-            <p>Your cart is empty.</p>
-          )}
+          <ul>
+            {cartItems.map((item) => (
+              <li key={item.id}>
+                <p>{item.name}</p>
+                <p>Quantity: {item.quantity}</p>
+                <Button
+                  variant="danger"
+                  onClick={() => handleRemoveFromCart(item.id)}
+                >
+                  Remove
+                </Button>
+              </li>
+            ))}
+          </ul>
         </Offcanvas.Body>
       </Offcanvas>
     </MainLayOut>

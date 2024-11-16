@@ -15,7 +15,6 @@ export const ThemeContext = createContext();
 function Home() {
   const [showmodel, setShowmodel] = useState(true);
   const [products, setProducts] = useState([]);
-  const GitUrl = "https://github.com/prakashwiser/products/blob/main";
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowmodel(false);
@@ -31,6 +30,7 @@ function Home() {
         setProducts(response.data);
       });
   }, []);
+  console.log(products);
 
   return (
     <ThemeContext.Provider

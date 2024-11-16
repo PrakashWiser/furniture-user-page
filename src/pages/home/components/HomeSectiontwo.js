@@ -1,10 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
-import MainLayOut from "../../../LayOut/MainLayOut";
+import MainLayOut from "../../../Layout/MainLayOut";
 import { Container, Row, Col } from "react-bootstrap";
 import Images from "./Images";
-import bannerone from "../images/home-banner-1.jpeg";
-import bannertwo from "../images/home-banner-2.jpeg";
-import bannerthree from "../images/home-banner-3.jpeg";
 import liveroom from "../images/live-room.jpg";
 import bedroom from "../images/bad-room.jpg";
 import kichenroow from "../images/kichen-room.jpg";
@@ -15,13 +12,13 @@ import { ThemeContext } from "../Home";
 function HomeSectiontwo() {
   const { products } = useContext(ThemeContext);
   const [banner, setBanner] = useState([]);
-  const GitUrl = "https://github.com/prakashwiser/products/blob/main/";
+  const GitUrl =
+    "https://raw.githubusercontent.com/prakashwiser/User-page-furniture/refs/heads/main/src/pages/home/images/";
 
   useEffect(() => {
     let Filter = products.filter((item) => item.listingType === "others");
     setBanner(Filter);
-  }, [products]);
-  console.log(banner);
+    }, [products]);
 
   return (
     <MainLayOut>

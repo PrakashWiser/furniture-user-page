@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import MainLayOut from "../../../LayOut/MainLayOut";
+import MainLayOut from "../../../Layout/MainLayOut";
 import Images from "./Images";
 import home1 from "../images/home-sec-8-1.jpg";
 import home2 from "../images/home-sec-8-2.jpg";
@@ -8,11 +8,7 @@ import home3 from "../images/home-sec-8-3.jpg";
 import home4 from "../images/home-sec-8-4.jpg";
 import home5 from "../images/home-sec-8-5.jpg";
 import home6 from "../images/home-sec-8-6.jpg";
-import { useContext } from "react";
-import { ThemeContext } from "../Home";
 function HomeSectioneight() {
-  const { products } = useContext(ThemeContext);
-
   return (
     <>
       <MainLayOut styles="home_sec_8">

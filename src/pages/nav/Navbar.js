@@ -1,11 +1,10 @@
-import React, { useState,  useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import "./style.css";
 import { MdLightMode } from "react-icons/md";
 import { FiMoon } from "react-icons/fi";
+import "./style.css";
 
 function Navbars() {
   const [value, setValue] = useState("light");
@@ -30,27 +29,6 @@ function Navbars() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <NavDropdown
-              title="Home"
-              id="navbarScrollingDropdown"
-              className="custom-dropdown"
-            >
-              <NavDropdown.Item href="#action3" className="dropdown-item">
-                Home v1 — Modern Elegance
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action3" className="dropdown-item">
-                Home v2 — Rustic Comfort
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action3" className="dropdown-item">
-                Home v3 — Minimalist Chic
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action3" className="dropdown-item">
-                Home v4 — Industrial Vibes
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action3" className="dropdown-item">
-                Home v5 — Vintage Revival
-              </NavDropdown.Item>
-            </NavDropdown>
             <Nav.Link href="#contact">Contact</Nav.Link>
             <Nav.Link
               onClick={() => setValue(value === "light" ? "dark" : "light")}

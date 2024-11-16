@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Images from "./Images";
 import hallone from "../images/hall-img-one.jpg";
 import halltwo from "../images/hall-img-two.jpg";
-import MainLayOut from "../../../LayOut/MainLayOut";
+import MainLayOut from "../../../Layout/MainLayOut";
 import { useContext } from "react";
 import { ThemeContext } from "../Home";
 function HomeSectionsix() {
@@ -15,10 +15,10 @@ function HomeSectionsix() {
         <Container>
           <div className="home_sec_6 my-2 my-md-5">
             <Row>
-              <Col md={6} data-aos="fade-left" data-aos-duration="3000">
+              <Col md={6} data-aos="fade-up" data-aos-duration="3000">
                 <Images link={hallone} styles="img-fluid" alt="hall-pic" />
               </Col>
-              <Col md={6} data-aos="fade-right" data-aos-duration="3000">
+              <Col md={6} data-aos="fade-down" data-aos-duration="3000">
                 <Images
                   link={halltwo}
                   styles="img-fluid pt-3 pt-md-0"
