@@ -12,7 +12,6 @@ import badone from "../images/bad-1.jpeg";
 import badtwo from "../images/bad-2.jpeg";
 import badthree from "../images/bad-3.jpeg";
 import badfour from "../images/bad-4.jpeg";
-import { FiPlusCircle } from "react-icons/fi";
 import { FaShopify } from "react-icons/fa";
 import Images from "./Images";
 import { Container, Row, Col, Button, Offcanvas } from "react-bootstrap";
@@ -38,6 +37,7 @@ const ProductPage = () => {
       material: "Wood",
       dimensions: "20x18x35 inches",
       rating: 4.5,
+      feature: "Crafted from premium natural wood for durability and style.",
     },
     {
       id: 2,
@@ -53,6 +53,7 @@ const ProductPage = () => {
       material: "Wood",
       dimensions: "21x19x37 inches",
       rating: 4.0,
+      feature: "Sleek black finish for a sophisticated dining experience.",
     },
     {
       id: 3,
@@ -68,6 +69,7 @@ const ProductPage = () => {
       material: "Leather",
       dimensions: "22x20x38 inches",
       rating: 4.8,
+      feature: "Luxurious leather seat with ergonomic design for comfort.",
     },
     {
       id: 4,
@@ -83,6 +85,7 @@ const ProductPage = () => {
       material: "Wood",
       dimensions: "23x21x36 inches",
       rating: 3.5,
+      feature: "Distressed finish adds rustic charm to your dining room.",
     },
     {
       id: 5,
@@ -98,6 +101,7 @@ const ProductPage = () => {
       material: "Metal",
       dimensions: "22x18x34 inches",
       rating: 4.2,
+      feature: "Minimalist metal design for a contemporary industrial look.",
     },
     {
       id: 6,
@@ -113,6 +117,7 @@ const ProductPage = () => {
       material: "Plastic",
       dimensions: "20x19x33 inches",
       rating: 4.7,
+      feature: "Lightweight and versatile design for easy placement.",
     },
     {
       id: 7,
@@ -128,6 +133,7 @@ const ProductPage = () => {
       material: "Wood",
       dimensions: "21x18x35 inches",
       rating: 4.3,
+      feature: "Scandinavian design for modern and minimalist interiors.",
     },
     {
       id: 8,
@@ -143,6 +149,7 @@ const ProductPage = () => {
       material: "Leather",
       dimensions: "24x20x38 inches",
       rating: 4.9,
+      feature: "Contemporary design with premium leather upholstery.",
     },
     {
       id: 9,
@@ -158,6 +165,7 @@ const ProductPage = () => {
       material: "Fabric",
       dimensions: "23x19x36 inches",
       rating: 4.6,
+      feature: "Plush cushioning for ultimate dining comfort.",
     },
     {
       id: 10,
@@ -173,6 +181,7 @@ const ProductPage = () => {
       material: "Velvet",
       dimensions: "22x21x34 inches",
       rating: 4.0,
+      feature: "Vibrant color and bold design for a statement piece.",
     },
     {
       id: 11,
@@ -188,6 +197,7 @@ const ProductPage = () => {
       material: "Wood",
       dimensions: "23x19x36 inches",
       rating: 4.4,
+      feature: "Classic wooden frame with intricate detailing.",
     },
     {
       id: 12,
@@ -203,6 +213,7 @@ const ProductPage = () => {
       material: "Wood",
       dimensions: "22x20x35 inches",
       rating: 4.2,
+      feature: "Retro charm with a sturdy, durable build.",
     },
   ];
 
@@ -254,7 +265,7 @@ const ProductPage = () => {
             <Images link={selectedChair.img} styles="img-fluid" />
           </Col>
           <Col lg={6}>
-            <h2>{selectedChair.name}</h2>
+            <h3>{selectedChair.name}</h3>
             <h5>{selectedChair.price}</h5>
             <p>{selectedChair.description}</p>
             <div>
@@ -272,6 +283,10 @@ const ProductPage = () => {
               </p>
               <p>
                 <strong>Category:</strong> {selectedChair.Categories}
+              </p>
+              <p>
+                {" "}
+                <strong>feature:</strong> {selectedChair.feature}
               </p>
             </div>
             <div className="d-flex gap-3">

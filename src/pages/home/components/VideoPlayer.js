@@ -1,22 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactPlayer from "react-player";
 
-const VideoPlayer = ({ url }) => {
-  const [play, setPlay] = useState(false);
+const VideoPlayer = ({ url, isPlaying }) => {
   const handleEnd = () => {
     alert("Video has finished!");
   };
-  const HandlePlay = () => {
-    setPlay(true);
-    
-  };
+
   return (
-    <div className="video-player" onClick={HandlePlay}>
+    <div className="video-player">
       <ReactPlayer
         url={url}
         controls={true}
+        playing={isPlaying} 
         onEnded={handleEnd}
-        playing={play}
         width="100%"
         height="500px"
       />
