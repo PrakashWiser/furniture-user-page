@@ -8,6 +8,7 @@ import home3 from "../images/home-sec-8-3.jpg";
 import home4 from "../images/home-sec-8-4.jpg";
 import home5 from "../images/home-sec-8-5.jpg";
 import home6 from "../images/home-sec-8-6.jpg";
+import { Link } from "react-router-dom";
 function HomeSectioneight() {
   return (
     <>
@@ -21,9 +22,12 @@ function HomeSectioneight() {
                   Tag @miniture in your Instagram photos for a chance to be
                   featured here.
                 </p>
-                <button className="rounded-pill border border-1 py-1 px-3">
+                <Link
+                  to="https://www.instagram.com/itzprakash_2503/https://www.instagram.com/itzprakash_2503/"
+                  className="rounded-pill border border-1 py-1 px-3"
+                >
                   Visit Our Instagram
-                </button>
+                </Link>
               </div>
             </Col>
             <Col md={8}>

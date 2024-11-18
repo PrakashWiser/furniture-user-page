@@ -24,6 +24,7 @@
 .Home_sec_1 .chair_icon:hover,
 .Home_sec_1 a:hover {
   background-color: black;
+  color: white !important;
 }
 .Home_sec_2 img {
   border-radius: 20px;
@@ -118,7 +119,6 @@
   display: inline-block;
 }
 
-
 .home_sec_4 .shop {
   display: flex;
   font-weight: var(--fw600);
@@ -188,29 +188,29 @@
 .home_sec_8 .postion_type {
   margin-top: -100px;
 }
-.home_sec_8 h5{
+.home_sec_8 h5 {
   font-size: 35px;
 }
-.home_sec_8 p{
+.home_sec_8 p {
   font-size: var(--sz16);
   font-weight: var(--fw600);
   width: 83%;
 }
-.home_sec_8 button{
+.home_sec_8 a {
   font-weight: var(--fw600);
 }
-.home_sec_8 button:hover {
-  background-color: var(--primary-color);
-  color: var(--text-color);
+.home_sec_8 a:hover {
+  background-color: rgb(224, 138, 152);
+  color: white !important;
 }
-.danger_iocn{
+.danger_iocn {
   position: absolute;
   color: var(--text-color);
   font-size: 30px;
-  right:0 ;
+  right: 0;
 }
 
-.model_pic{
+.model_pic {
   margin-top: 400px;
 }
 @media (min-width: 1200px) {
@@ -263,10 +263,10 @@
   .limited_time span {
     font-size: var(--sz15);
   }
-  .home_sec_8 h5{
+  .home_sec_8 h5 {
     font-size: 25px;
   }
-  .home_sec_8 p{
+  .home_sec_8 p {
     font-size: var(--sz15);
     width: 100%;
   }

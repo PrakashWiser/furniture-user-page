@@ -9,11 +9,6 @@ const videoUrl = "https://www.youtube.com/watch?v=yDgFcEzaCQ0";
 
 function HomeSectionfour() {
   const [isPlaying, setIsPlaying] = useState(false);
-
-  const handleShopClick = () => {
-    setIsPlaying(true);
-  };
-
   return (
     <>
       <MainLayOut styles="pt-md-5 home_sec_4">

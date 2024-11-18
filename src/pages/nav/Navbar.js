@@ -29,7 +29,7 @@ function Navbars() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link
               onClick={() => setValue(value === "light" ? "dark" : "light")}
             >

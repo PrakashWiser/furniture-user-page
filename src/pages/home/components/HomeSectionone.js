@@ -3,11 +3,7 @@ import MainLayOut from "../../../Layout/MainLayOut";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import { useContext } from "react";
-import { ThemeContext } from "../Home";
-
 function HomeSectionone() {
-  const { products } = useContext(ThemeContext);
   const handleShopNowClick = () => {
     toast.success("Welcome to the Shop! Explore our latest collection.");
   };

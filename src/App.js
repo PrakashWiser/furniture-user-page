@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import "./App.css";
 import Navbar from "./pages/nav/Navbar";
 import ProductsPage from "./pages/home/components/ProductsPage";
+import Contact from "./pages/contact/Contact";
 import Footer from "./pages/footer/Footer";
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ProductsPage/:id" element={<ProductsPage />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
       <Footer/>
     </Router>

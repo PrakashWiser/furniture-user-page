@@ -136,7 +136,7 @@ const ProductPage = () => {
       feature: "Scandinavian design for modern and minimalist interiors.",
     },
     {
-      id: 8,
+      id: 22,
       img: chair8,
       name: "Contemporary Leather Chair",
       price: "$219.99",

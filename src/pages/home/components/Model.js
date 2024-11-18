@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 import Images from "./Images";
-import model from "../images/mode-2.jpg";
+import model from "../images/model-pop.jpeg";
 import { MdOutlineDangerous } from "react-icons/md";
 
 function Model({ showmodel, setShowmodel }) {

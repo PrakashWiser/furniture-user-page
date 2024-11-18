@@ -10,7 +10,6 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
-  FaTwitter,
   FaFreeCodeCamp,
   FaLinkedin,
   FaGithub,
@@ -21,37 +20,33 @@ import "./style.css"; // Ensure correct import for styles
 function Footer() {
   const socialLinks = [
     {
-      icon: <FaTwitter />,
-      link: "https://twitter.com/yourprofile",
-    },
-    {
       icon: <FaLinkedin />,
-      link: "https://linkedin.com/in/yourprofile",
+      link: "https://www.linkedin.com/in/wiser-prakash2503/",
     },
     {
       icon: <FaGithub />,
-      link: "https://github.com/yourprofile",
+      link: "https://github.com/prakashwiser",
     },
     {
       icon: <FaFreeCodeCamp />,
-      link: "https://www.freecodecamp.org/yourprofile",
+      link: "https://www.freecodecamp.org/certification/fccd51d26ed-17bc-4b94-bd2d-2c0d54f3fbf0/responsive-web-design",
     },
   ];
 
   const quickLinks = [
     { title: "Quick Links" },
-    { name: "My Account", link: "/account" },
+    { name: "My Account", link: "#" },
     { name: "Shop", link: "/shop" },
     { name: "Contact Us", link: "/contact" },
-    { name: "About Us", link: "/about" },
+    { name: "About Us", link: "#" },
   ];
 
   const aboutLinks = [
     { title: "Information" },
-    { name: "Privacy Policy", link: "/privacy-policy" },
-    { name: "Refund Policy", link: "/refund-policy" },
-    { name: "Shipping & Return", link: "/shipping-return" },
-    { name: "Terms & Conditions", link: "/terms-conditions" },
+    { name: "Privacy Policy", link: "#" },
+    { name: "Refund Policy", link: "#" },
+    { name: "Shipping & Return", link: "#" },
+    { name: "Terms & Conditions", link: "#" },
   ];
 
   return (
