@@ -6,7 +6,6 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
-import MainLayOut from "../../Layout/MainLayOut";
 import { Container } from "react-bootstrap";
 
 function Contact() {
@@ -33,7 +32,6 @@ function Contact() {
 
   return (
     <>
-      <MainLayOut>
         <Container>
           <ToastContainer
             position="top-right"
@@ -106,7 +104,6 @@ function Contact() {
             </Button>
           </Form>
         </Container>
-      </MainLayOut>
     </>
   );
 }

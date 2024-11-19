@@ -50,7 +50,7 @@ function Footer() {
   ];
 
   return (
-    <MainLayOut styles="footer">
+    <footer className="footer">
       <Container >
         <Row>
           <Col md={3}>
@@ -113,7 +113,7 @@ function Footer() {
           </Col>
         </Row>
       </Container>
-    </MainLayOut>
+    </footer>
   );
 }
 
