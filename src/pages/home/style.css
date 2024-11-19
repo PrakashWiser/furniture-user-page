@@ -178,15 +178,16 @@
   font-weight: 500;
   color: gray;
 }
+.home_sec_8 li{
+  overflow: hidden;
+  border-radius: 10px;
+}
 .home_sec_8 img {
   border-radius: 16px;
-  transition: transform 0.5s ease;
+  transition: transform 5s ease;
 }
 .home_sec_8 img:hover {
-  transform: scale(1.04);
-}
-.home_sec_8 .postion_type {
-  margin-top: -100px;
+  transform: scale(1.4);
 }
 .home_sec_8 h5 {
   font-size: 35px;

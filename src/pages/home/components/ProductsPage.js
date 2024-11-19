@@ -18,6 +18,7 @@ import { Container, Row, Col, Button, Offcanvas } from "react-bootstrap";
 import MainLayOut from "../../../Layout/MainLayOut";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -38,6 +39,7 @@ const ProductPage = () => {
       dimensions: "20x18x35 inches",
       rating: 4.5,
       feature: "Crafted from premium natural wood for durability and style.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 2,
@@ -54,6 +56,7 @@ const ProductPage = () => {
       dimensions: "21x19x37 inches",
       rating: 4.0,
       feature: "Sleek black finish for a sophisticated dining experience.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 3,
@@ -70,6 +73,7 @@ const ProductPage = () => {
       dimensions: "22x20x38 inches",
       rating: 4.8,
       feature: "Luxurious leather seat with ergonomic design for comfort.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 4,
@@ -86,6 +90,7 @@ const ProductPage = () => {
       dimensions: "23x21x36 inches",
       rating: 3.5,
       feature: "Distressed finish adds rustic charm to your dining room.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 5,
@@ -102,7 +107,9 @@ const ProductPage = () => {
       dimensions: "22x18x34 inches",
       rating: 4.2,
       feature: "Minimalist metal design for a contemporary industrial look.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
+
     {
       id: 6,
       img: chair6,
@@ -118,6 +125,7 @@ const ProductPage = () => {
       dimensions: "20x19x33 inches",
       rating: 4.7,
       feature: "Lightweight and versatile design for easy placement.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 7,
@@ -134,6 +142,7 @@ const ProductPage = () => {
       dimensions: "21x18x35 inches",
       rating: 4.3,
       feature: "Scandinavian design for modern and minimalist interiors.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 22,
@@ -150,6 +159,7 @@ const ProductPage = () => {
       dimensions: "24x20x38 inches",
       rating: 4.9,
       feature: "Contemporary design with premium leather upholstery.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 9,
@@ -166,6 +176,7 @@ const ProductPage = () => {
       dimensions: "23x19x36 inches",
       rating: 4.6,
       feature: "Plush cushioning for ultimate dining comfort.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 10,
@@ -182,6 +193,7 @@ const ProductPage = () => {
       dimensions: "22x21x34 inches",
       rating: 4.0,
       feature: "Vibrant color and bold design for a statement piece.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 11,
@@ -198,6 +210,7 @@ const ProductPage = () => {
       dimensions: "23x19x36 inches",
       rating: 4.4,
       feature: "Classic wooden frame with intricate detailing.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
     {
       id: 12,
@@ -214,6 +227,7 @@ const ProductPage = () => {
       dimensions: "22x20x35 inches",
       rating: 4.2,
       feature: "Retro charm with a sturdy, durable build.",
+      bio: "Indulge in unparalleled relaxation with our Luxe Comfort Lounge Armchair. Crafted with a meticulous blend of style, comfort, and durability, this armchair is the perfect addition to any living space, study, or reading nook. Whether you're curling up with a good book, unwinding after a long day, or entertaining guests, our armchair is designed to elevate your comfort and style.",
     },
   ];
 
@@ -261,7 +275,7 @@ const ProductPage = () => {
     <MainLayOut>
       <Container className="pt-5">
         <Row>
-          <Col lg={6} className="d-flex justify-content-center">
+          <Col lg={6} className="d-flex justify-content-center align-items-center">
             <Images link={selectedChair.img} styles="img-fluid" />
           </Col>
           <Col lg={6}>
@@ -285,11 +299,10 @@ const ProductPage = () => {
                 <strong>Category:</strong> {selectedChair.Categories}
               </p>
               <p>
-                {" "}
                 <strong>feature:</strong> {selectedChair.feature}
               </p>
             </div>
-            <div className="d-flex gap-3">
+            <div className="d-flex gap-3 my-4">
               <Button className="bg-success border-0" onClick={handleAddToCart}>
                 Add to Cart
               </Button>
@@ -297,6 +310,7 @@ const ProductPage = () => {
                 {selectedChair.icon}
               </Button>
             </div>
+            <span >{selectedChair.bio}</span>
           </Col>
         </Row>
       </Container>

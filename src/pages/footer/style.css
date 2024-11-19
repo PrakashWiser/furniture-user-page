@@ -96,7 +96,17 @@
   opacity: 0;
   transition: visibility 0s 0.2s, opacity 0.2s ease-in-out;
 }
+@media (min-width:990px) {
+  .with_tybe{
+    width: 40% !important;
+  }
+}
+@media (max-width:991px) {
+  .with_tybe{
+    width: 100% !important;
 
+  }
+}
 @media (max-width: 768px) {
   .footer .col {
     text-align: center;
@@ -113,5 +123,8 @@
 
   .footer-contact span {
     font-size: 16px;
+  }
+  .with_tybe{
+    width: 100%;
   }
 }

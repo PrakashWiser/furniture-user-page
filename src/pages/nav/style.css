@@ -8,3 +8,8 @@
 .custom-dropdown:hover .dropdown-menu {
     display: block; 
   }
+@media (max-width:992px) {
+  .btn_login{
+    width: 25%;
+  }
+}

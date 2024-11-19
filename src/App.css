@@ -49,6 +49,7 @@ body{
   color: var(--text-color) !important;
   background-color: var(--background-color) !important;
   font-family: var(--fontmonserrat) !important;
+  font-size: 18px !important;
 }
 
 .inter,
@@ -88,9 +89,7 @@ ul {
   list-style: none;
   padding: 0 !important;
 }
-p {
-  font-family: var(--font-seif);
-}
+
 .bg_org {
   background-color: var(--primary-color) !important;
 }

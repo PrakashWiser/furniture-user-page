@@ -23,7 +23,7 @@ function HomeSectioneight() {
                   featured here.
                 </p>
                 <Link
-                  to="https://www.instagram.com/itzprakash_2503/https://www.instagram.com/itzprakash_2503/"
+                  to="https://www.instagram.com/itzprakash_2503/"
                   className="rounded-pill border border-1 py-1 px-3"
                 >
                   Visit Our Instagram
@@ -36,7 +36,7 @@ function HomeSectioneight() {
                   <li>
                     <Images link={home1} styles="img-fluid" />
                   </li>
-                  <li className="pos">
+                  <li>
                     <Images link={home2} styles="img-fluid" />
                   </li>
                   <li>
@@ -47,8 +47,8 @@ function HomeSectioneight() {
                   <li>
                     <Images link={home4} styles="img-fluid" />
                   </li>
-                  <li>
-                    <Images link={home6} styles="img-fluid postion_type" />
+                  <li className="postion_type">
+                    <Images link={home6} styles="img-fluid " />
                   </li>
                   <li>
                     <Images link={home5} styles="img-fluid" />
