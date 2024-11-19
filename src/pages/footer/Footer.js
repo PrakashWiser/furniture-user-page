@@ -14,7 +14,7 @@ import {
   FaGithub,
   FaArrowRight,
 } from "react-icons/fa";
-import "./style.css"; // Ensure correct import for styles
+import "./style.css"; 
 
 function Footer() {
   const socialLinks = [
