@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import MainLayOut from "../../../Layout/MainLayOut";
+import MainLayOut from "./Layout/Mainlayout";
 import Images from "./Images";
 import home1 from "../images/home-sec-8-1.jpg";
 import home2 from "../images/home-sec-8-2.jpg";

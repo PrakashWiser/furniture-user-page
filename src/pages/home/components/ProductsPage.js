@@ -15,7 +15,7 @@ import badfour from "../images/bad-4.jpeg";
 import { FaShopify } from "react-icons/fa";
 import Images from "./Images";
 import { Container, Row, Col, Button, Offcanvas } from "react-bootstrap";
-import MainLayOut from "../../../Layout/MainLayOut";
+import MainLayOut from "./Layout/Mainlayout";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";

@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Images from "./Images";
 import hallone from "../images/hall-img-one.jpg";
 import halltwo from "../images/hall-img-two.jpg";
-import MainLayOut from "../../../Layout/MainLayOut";
+import MainLayOut from "./Layout/Mainlayout";
 import { useContext } from "react";
 import { ThemeContext } from "../Home";
 function HomeSectionsix() {

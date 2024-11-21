@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import MainLayOut from "../../../Layout/MainLayOut";
+import MainLayOut from "./Layout/Mainlayout";
 import { Container, Row, Col } from "react-bootstrap";
 import Images from "./Images";
 import liveroom from "../images/live-room.jpg";

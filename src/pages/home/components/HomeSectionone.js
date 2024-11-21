@@ -1,5 +1,5 @@
 import React from "react";
-import MainLayOut from "../../../Layout/MainLayOut";
+import MainLayOut from "./Layout/Mainlayout";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";

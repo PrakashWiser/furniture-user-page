@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MainLayOut from "../../../Layout/MainLayOut";
+import MainLayOut from "./Layout/Mainlayout";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import VideoPlayer from "./VideoPlayer";

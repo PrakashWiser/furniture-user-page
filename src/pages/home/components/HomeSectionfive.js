@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import { Container } from "react-bootstrap";
-import MainLayOut from "../../../Layout/MainLayOut";
+import MainLayOut from "./Layout/Mainlayout";
 import Images from "./Images";
 import { useContext } from "react";
 import { ThemeContext } from "../Home";
