@@ -30,7 +30,6 @@ function Home() {
         setProducts(response.data);
       });
   }, []);
-  console.log(products);
 
   return (
     <ThemeContext.Provider
