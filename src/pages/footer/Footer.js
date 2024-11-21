@@ -95,7 +95,7 @@ function Footer() {
           <Col md={3} className="footer-contact">
             <h2>Let’s get in touch</h2>
             <span>
-              Sign up for our newsletter and receive 10% off your next
+              Sign up for our news  and receive 10% off your next
               purchase!
             </span>
             <InputGroup className="mt-3 custom-input-group">
