@@ -38,7 +38,7 @@ function Home() {
       }}
     >
       <Model showmodel={showmodel} setShowmodel={setShowmodel} />;
-      <HomeSectionone />
+      <HomeSectionone  />
       <HomeSectiontwo />
       <HomeSectionthree />
       <HomeSectionfour />
