@@ -10,7 +10,7 @@ function Model({ showmodel, setShowmodel }) {
   return (
     <>
       <Modal
-        className="postion-relative model_pic"
+        className="postion-relative model_pic d-none d-md-block"
         show={showmodel}
         onHide={handleCloseModal}
       >
