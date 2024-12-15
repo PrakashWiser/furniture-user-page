@@ -37,7 +37,7 @@ const Signup = () => {
   };
   return (
     <Container>
-      <div className="d-flex flex-column justify-content-center align-items-center vh-100  text-white">
+      <div className="d-flex flex-column justify-content-center align-items-center vh-100  text_white">
         <h1 className="fw-bold text-danger">Sign Up</h1>
         <form className="with_tybe" onSubmit={handleSubmit}>
           <div className="mb-3">

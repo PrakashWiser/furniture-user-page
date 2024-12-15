@@ -30,11 +30,21 @@ function Navbars() {
             <Nav.Link
               onClick={() => setValue(value === "light" ? "dark" : "light")}
             >
-              {value === "light" ? <MdLightMode /> : <FiMoon />}
+              {value === "light" ? <FiMoon /> : <MdLightMode />}
             </Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
-            <Nav.Link className="bg-success px-4 inline-block btn_login" href="/Login">Login</Nav.Link>
-          <Nav.Link className="bg-primary px-4  my-3 my-lg-0 btn_login" href="/Signup">Sign up</Nav.Link>
+            <Nav.Link
+              className="bg-success px-4 inline-block btn_login"
+              href="/Login"
+            >
+              Login
+            </Nav.Link>
+            <Nav.Link
+              className="bg-primary px-4  my-3 my-lg-0 btn_login"
+              href="/Signup"
+            >
+              Sign up
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

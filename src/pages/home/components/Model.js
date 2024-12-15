@@ -23,5 +23,4 @@ function Model({ showmodel, setShowmodel }) {
     </>
   );
 }
-
 export default Model;

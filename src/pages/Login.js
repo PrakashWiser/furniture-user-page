@@ -74,10 +74,10 @@ const Login = () => {
               Sign in
             </button>
             <Link
-              to={"/UpdatePassword"}
+              to={"/Signup"}
               className="btn btn-primary fw-bold text-white"
             >
-              Forget Password
+              Create Account
             </Link>
           </div>
         </form>

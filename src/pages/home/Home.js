@@ -18,7 +18,6 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowmodel(false);
-
       return () => clearTimeout(timer);
     }, [5000]);
   }, []);
@@ -38,7 +37,7 @@ function Home() {
       }}
     >
       <Model showmodel={showmodel} setShowmodel={setShowmodel} />;
-      <HomeSectionone  />
+      <HomeSectionone />
       <HomeSectiontwo />
       <HomeSectionthree />
       <HomeSectionfour />
