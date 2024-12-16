@@ -10,11 +10,11 @@ function Model({ showmodel, setShowmodel }) {
   return (
     <>
       <Modal
-        className="postion-relative model_pic d-none d-md-block"
+        className="postion-relative model_pic"
         show={showmodel}
         onHide={handleCloseModal}
       >
-        <Images link={model} styles="img-fluid" alt="model-pic" />
+        <Images link={model} styles="w-100 model_img" alt="model-pic" />
         <MdOutlineDangerous
           className="danger_iocn"
           onClick={handleCloseModal}

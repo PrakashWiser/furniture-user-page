@@ -13,15 +13,14 @@ import axios from "axios";
 export const ThemeContext = createContext();
 
 function Home() {
-  const [showmodel, setShowmodel] = useState(true);
   const [products, setProducts] = useState([]);
+  const [showmodel, setShowmodel] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowmodel(false);
       return () => clearTimeout(timer);
-    }, [5000]);
+    }, [3000]);
   }, []);
-
   useEffect(() => {
     axios
       .get("https://67346355a042ab85d119f3fa.mockapi.io/products")

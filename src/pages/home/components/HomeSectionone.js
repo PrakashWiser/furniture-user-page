@@ -3,6 +3,7 @@ import MainLayOut from "./Layout/Mainlayout";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import { Button } from "react-bootstrap";
 function HomeSectionone() {
   const handleShopNowClick = () => {
     toast.success("Welcome to the Shop! Explore our latest collection.");
@@ -22,9 +23,9 @@ function HomeSectionone() {
             <ul>
               <li className="d-lg-flex gap-3 align-items-center">
                 <h2>Creations</h2>
-                <Link onClick={handleShopNowClick} to="/shop">
+                <Button onClick={handleShopNowClick} className="text-white" variant="warning">
                   Shop Now
-                </Link>
+                </Button>
               </li>
             </ul>
           </div>

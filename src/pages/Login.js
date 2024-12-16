@@ -1,9 +1,7 @@
 "use client";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useNavigate,Link} from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,7 +11,7 @@ import * as Yup from "yup";
 
 const Login = () => {
   const [apiData, setApiData] = useState([]);
-  const router = useRouter();
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -31,11 +29,10 @@ const Login = () => {
 
   const handleSubmit = (values) => {
     const { email, password } = values;
-
     const user = apiData.find((item) => item.email === email);
     if (!user) {
       toast.error("Email not found. Please register first.");
-      router.push("/Signup");
+      navigate("/Signup");
       return;
     }
 
@@ -46,9 +43,10 @@ const Login = () => {
 
     toast.success("Login successful");
     localStorage.setItem("userData", JSON.stringify(user));
-    router.push("/");
+    navigate("/");
   };
-
+ 
+  
   return (
     <Container>
       <div className="d-flex flex-column justify-content-center align-items-center vh-100 text-white">

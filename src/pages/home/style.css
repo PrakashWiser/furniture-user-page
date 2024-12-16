@@ -210,13 +210,16 @@
   font-size: 30px;
   right: 0;
 }
-
 .model_pic {
-  margin-top: 400px;
+  margin-top: 300px;
 }
+
 @media (min-width: 1200px) {
   .home_sec_8 .postion_type {
     margin-top: -170px;
+  }
+  .model_pic {
+    margin-top: 400px;
   }
 }
 @media (max-width: 1200px) {
