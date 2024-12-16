@@ -1,112 +1,160 @@
 "use client";
+
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Container } from "react-bootstrap";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 const Signup = () => {
-  const [num, setNum] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [repassword, setRepassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password == repassword) {
-      if (email == "" && password == "")
-        return toast.error("invaild email or password");
-      axios.post("https://66f0f85341537919154f06e7.mockapi.io/signup", {
+  const validationSchema = Yup.object().shape({
+    num: Yup.string().required("Number is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    password: Yup.string()
+      .min(6, "Password must be at least 6 characters")
+      .required("Password is required"),
+    repassword: Yup.string()
+      .oneOf([Yup.ref("password")], "Passwords must match")
+      .required("Confirm Password is required"),
+  });
+
+  const handleSubmit = (values, { resetForm }) => {
+    const { num, email, password } = values;
+
+    axios
+      .post("https://66f0f85341537919154f06e7.mockapi.io/signup", {
         num,
         email,
         password,
-      });
-      setNum("");
-      setEmail("");
-      setPassword("");
-      setRepassword("");
-      navigate("/Signin");
-    } else {
-      toast.warn("Miss Match Password");
-    }
+      })
+      .then(() => {
+        toast.success("Signup successful");
+        resetForm();
+        navigate("/Signin");
+      })
+      .catch(() => toast.error("Error signing up"));
   };
-  const DeleteData = (id) => {
-    axios.delete(`https://66f0f85341537919154f06e7.mockapi.io/signup/1`);
+
+  const deleteData = (id) => {
+    axios
+      .delete(`https://66f0f85341537919154f06e7.mockapi.io/signup/${id}`)
+      .then(() => toast.success("Data deleted successfully"))
+      .catch(() => toast.error("Error deleting data"));
   };
+
   return (
     <Container>
-      <div className="d-flex flex-column justify-content-center align-items-center vh-100  text_white">
+      <div className="d-flex flex-column justify-content-center align-items-center vh-100 text_white">
         <h1 className="fw-bold text-danger">Sign Up</h1>
-        <form className="with_tybe" onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="Number" className="form-label">
-              Number
-            </label>
-            <input
-              type="number"
-              className="form-control"
-              id="Number"
-              placeholder="Enter Number"
-              value={num}
-              onChange={(e) => setNum(e.target.value)}
-            />
-          </div>
 
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">
-              Email
-            </label>
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              placeholder="Enter Eamil"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
+        <Formik
+          initialValues={{
+            num: "",
+            email: "",
+            password: "",
+            repassword: "",
+          }}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {() => (
+            <Form className="with_tybe">
+              <div className="mb-3">
+                <label htmlFor="Number" className="form-label">
+                  Number
+                </label>
+                <Field
+                  type="text"
+                  className="form-control"
+                  id="Number"
+                  name="num"
+                  placeholder="Enter Number"
+                />
+                <ErrorMessage
+                  name="num"
+                  component="div"
+                  className="text-danger"
+                />
+              </div>
 
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label">
-              Password
-            </label>
-            <input
-              type="password"
-              className="form-control"
-              id="password"
-              placeholder="Enter Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label">
-              Conform Password
-            </label>
-            <input
-              type="password"
-              placeholder="Re-Enter  Password"
-              className="form-control"
-              id="repassword"
-              value={repassword}
-              onChange={(e) => setRepassword(e.target.value)}
-            />
-          </div>
-          <div className="d-flex justify-content-between my-4">
-            <button type="submit" className="btn btn-warning  fw-bold px-4 text-white">
-              Sign up
-            </button>
-            <button
-              onClick={() => DeleteData(1)}
-              type="submit"
-              className="btn btn-danger  fw-bold px-4"
-            >
-              Delete
-            </button>
-          </div>
-        </form>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+                <Field
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter Email"
+                />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-danger"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label htmlFor="password" className="form-label">
+                  Password
+                </label>
+                <Field
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Enter Password"
+                />
+                <ErrorMessage
+                  name="password"
+                  component="div"
+                  className="text-danger"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label htmlFor="repassword" className="form-label">
+                  Confirm Password
+                </label>
+                <Field
+                  type="password"
+                  placeholder="Re-Enter Password"
+                  className="form-control"
+                  id="repassword"
+                  name="repassword"
+                />
+                <ErrorMessage
+                  name="repassword"
+                  component="div"
+                  className="text-danger"
+                />
+              </div>
+
+              <div className="d-flex justify-content-between my-4">
+                <button
+                  type="submit"
+                  className="btn btn-warning fw-bold px-4 text-white"
+                >
+                  Sign up
+                </button>
+                <button
+                  type="button"
+                  onClick={() => deleteData(1)} // Replace "1" with the appropriate ID
+                  className="btn btn-danger fw-bold px-4"
+                >
+                  Delete
+                </button>
+              </div>
+            </Form>
+          )}
+        </Formik>
+
         <ToastContainer
           position="top-left"
           autoClose={3000}
@@ -122,4 +170,5 @@ const Signup = () => {
     </Container>
   );
 };
+
 export default Signup;
