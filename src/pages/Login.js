@@ -1,11 +1,11 @@
 "use client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
-import { useNavigate,Link} from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -45,82 +45,88 @@ const Login = () => {
     localStorage.setItem("userData", JSON.stringify(user));
     navigate("/");
   };
- 
-  
+
   return (
     <Container>
-      <div className="d-flex flex-column justify-content-center align-items-center vh-100 text-white">
-        <a href="https://github.com/prakashwiser/"></a>
-        <h1 className="fw-bold text-success py-4">Sign in</h1>
-
-        <Formik
-          initialValues={{ email: "", password: "" }}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit}
-        >
-          {({ isSubmitting }) => (
-            <Form className="with_tybe">
-              <div className="mb-3">
-                <Field
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="Enter Email"
-                />
-                <ErrorMessage
-                  name="email"
-                  component="div"
-                  className="text-danger"
-                />
+      <Row className="d-flex justify-content-center align-items-center vh-100">
+        <Col xs={12} md={6} lg={4}>
+          <Card className="shadow-lg border-0 rounded p-4">
+            <Card.Body>
+              <div className="text-center">
+                <h2 className="fw-bold text-success mb-4">Sign in</h2>
               </div>
 
-              <div className="mb-3">
-                <Field
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  placeholder="Enter Password"
-                />
-                <ErrorMessage
-                  name="password"
-                  component="div"
-                  className="text-danger"
-                />
-              </div>
+              <Formik
+                initialValues={{ email: "", password: "" }}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+              >
+                {({ isSubmitting }) => (
+                  <Form>
+                    <div className="mb-3">
+                      <Field
+                        type="email"
+                        className="form-control shadow-sm"
+                        id="email"
+                        name="email"
+                        placeholder="Enter Email"
+                      />
+                      <ErrorMessage
+                        name="email"
+                        component="div"
+                        className="text-danger mt-1"
+                      />
+                    </div>
 
-              <div className="d-flex justify-content-between mt-4">
-                <button
-                  type="submit"
-                  className="btn btn-primary fw-bold"
-                  disabled={isSubmitting}
-                >
-                  Sign in
-                </button>
-                <Link
-                  href="/Signup"
-                  className="btn btn-primary fw-bold text-white"
-                >
-                  Create Account
-                </Link>
-              </div>
-            </Form>
-          )}
-        </Formik>
+                    <div className="mb-3">
+                      <Field
+                        type="password"
+                        className="form-control shadow-sm"
+                        id="password"
+                        name="password"
+                        placeholder="Enter Password"
+                      />
+                      <ErrorMessage
+                        name="password"
+                        component="div"
+                        className="text-danger mt-1"
+                      />
+                    </div>
 
-        <ToastContainer
-          position="top-right"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
-      </div>
+                    <div className="d-grid gap-2 mt-4">
+                      <button
+                        type="submit"
+                        className="btn btn-success fw-bold shadow-sm"
+                        disabled={isSubmitting}
+                      >
+                        Sign in
+                      </button>
+                      <Link
+                        to="/Signup"
+                        className="btn btn-outline-success fw-bold shadow-sm"
+                      >
+                        Create Account
+                      </Link>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </Container>
   );
 };

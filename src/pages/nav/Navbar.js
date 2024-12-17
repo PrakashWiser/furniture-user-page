@@ -58,7 +58,7 @@ function Navbars() {
             {user ? (
               <>
                 <Nav.Link
-                  className="bg-danger px-4 btn-auth text-white"
+                  className="bg-danger px-4 btn-auth text-white "
                   onClick={handleLogout}
                 >
                   Sign Out
