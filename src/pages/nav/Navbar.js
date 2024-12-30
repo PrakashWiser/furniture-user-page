@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { MdLightMode } from "react-icons/md";
@@ -34,47 +35,47 @@ function Navbars() {
   return (
     <Navbar expand="lg" className="bg_theme sticky-top">
       <Container>
-        <Navbar.Brand href="/" aria-label="Brand Logo">
+        <Navbar.Brand as={Link} to="/" aria-label="Brand Logo">
           Furniture
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="ms-lg-auto my-2 my-lg-0 d-lg-flex gap-3 align-lg-items-center"
+            className="ms-lg-auto  my-2 d-lg-flex gap-3 align-lg-items-center"
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link
+            <Link
+              className="nav-link"
               onClick={() => setValue(value === "light" ? "dark" : "light")}
-              aria-label={`Switch to ${
-                value === "light" ? "dark" : "light"
-              } mode`}
+              aria-label={`Switch to ${value === "light" ? "dark" : "light"} mode`}
             >
               {value === "light" ? <FiMoon /> : <MdLightMode />}
-            </Nav.Link>
+            </Link>
 
-            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Link className="bg-info px-4 btn  text-white" to="/contact">
+              Contact
+            </Link>
 
             {user ? (
-              <>
-                <Nav.Link
-                  className="bg-danger px-4 btn-auth text-white "
-                  onClick={handleLogout}
-                >
-                  Sign Out
-                </Nav.Link>
-              </>
+              <Link
+                className="bg-danger px-4 btn text-white"
+                onClick={handleLogout}
+                to="#"
+              >
+                Sign Out
+              </Link>
             ) : (
               <>
-                <Nav.Link className="bg-success px-4 btn-auth" href="/Login">
+                <Link className="bg-success px-4 btn text-white" to="/Login">
                   Login
-                </Nav.Link>
-                <Nav.Link
-                  className="bg-primary px-4 my-3 my-lg-0 btn-auth"
-                  href="/Signup"
+                </Link>
+                <Link
+                  className="bg-primary px-4 my-lg-0 btn text-white"
+                  to="/Signup"
                 >
                   Sign up
-                </Nav.Link>
+                </Link>
               </>
             )}
           </Nav>
