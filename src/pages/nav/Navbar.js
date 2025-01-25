@@ -8,16 +8,8 @@ import { FiMoon } from "react-icons/fi";
 import "./style.css";
 
 function Navbars() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(localStorage.getItem("userData"));
   const [value, setValue] = useState("light");
-
-  useEffect(() => {
-    let userData = localStorage.getItem("userData");
-    if (userData) {
-      let user = JSON.parse(userData);
-      setUser(user.email);
-    }
-  }, []);
 
   useMemo(() => {
     if (value === "dark") {

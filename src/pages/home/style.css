@@ -274,4 +274,7 @@
     font-size: var(--sz15);
     width: 100%;
   }
+  .model_pic {
+    display: none !important;
+  }
 }

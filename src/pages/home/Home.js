@@ -15,19 +15,22 @@ export const ThemeContext = createContext();
 function Home() {
   const [products, setProducts] = useState([]);
   const [showmodel, setShowmodel] = useState(true);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowmodel(false);
-      return () => clearTimeout(timer);
-    }, [3000]);
+    }, 2000);
+
+    return () => clearTimeout(timer); 
   }, []);
+
   useEffect(() => {
     axios
       .get("https://67346355a042ab85d119f3fa.mockapi.io/products")
       .then((response) => {
         setProducts(response.data);
       });
-  }, []);
+  }, []); 
 
   return (
     <ThemeContext.Provider
@@ -35,7 +38,7 @@ function Home() {
         products,
       }}
     >
-      <Model showmodel={showmodel} setShowmodel={setShowmodel} />;
+      <Model showmodel={showmodel} setShowmodel={setShowmodel} />
       <HomeSectionone />
       <HomeSectiontwo />
       <HomeSectionthree />
