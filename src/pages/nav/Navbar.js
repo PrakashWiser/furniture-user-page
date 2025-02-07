@@ -35,9 +35,9 @@ function Navbars() {
   return (
     <Navbar expand="lg" className="bg_theme sticky-top">
       <Container>
-        <Navbar.Brand as={Link} to="/" aria-label="Brand Logo">
+        <Link  to="/" aria-label="Brand Logo">
           Furniture
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
